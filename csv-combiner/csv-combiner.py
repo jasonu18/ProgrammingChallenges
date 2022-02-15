@@ -1,5 +1,7 @@
 # Challenge done using Python instead of PHP
 
+# Run command can be found in the README
+
 # import necessary modules 
 # pandas used for data manipulation / dataframe access, sys to get command line args, os to get basename
 import pandas as pd
