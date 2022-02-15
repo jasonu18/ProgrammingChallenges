@@ -11,7 +11,7 @@ def combine_csv(csv_list):
     # define a list to store the data frames with the additional column 'filename'
     data_list = []
 
-    # read each data frame from every csv file and append to new_file
+    # read data frame from each csv file and append to data_list
     for i in csv_list:
         df = pd.read_csv(i)
         df['filename'] = os.path.basename(i) # add filename column to data frame
