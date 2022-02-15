@@ -6,7 +6,7 @@ import pandas as pd
 import sys
 import os
 # function that takes in a list of csv files and a file name and outupts the resulting combined file
-def combine_csv(csv_list, filename):
+def combine_csv(csv_list):
     
     # define a list to store the data frames with the additional column 'filename'
     data_list = []
@@ -19,7 +19,7 @@ def combine_csv(csv_list, filename):
 
     # combine the csv files and convert to csv
     combined = pd.concat(data_list)
-    combined.to_csv(filename, index=False, encoding='utf-8-sig')
+    combined.to_csv(sys.stdout, index=False)
     
 
 
@@ -28,14 +28,12 @@ inputs = sys.argv[1:]
 all_files = []
 
 # modify input to put full path with correct formatting
-for i in inputs:
-    path = os.getcwd() + i[1:]
-    path = path.replace('/', '\\')
-    all_files.append(path)
+# for i in inputs:
+#     path = os.getcwd() + i[1:]
+#     path = path.replace('/', '\\')
+#     all_files.append(path)
 
-combined_file = os.getcwd() + '\\combined.csv'
-if os.path.exists(combined_file):
-    combine_csv(all_files, combined_file)
+combine_csv(inputs)
 
 
 
