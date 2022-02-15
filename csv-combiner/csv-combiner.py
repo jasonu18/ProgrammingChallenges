@@ -5,7 +5,7 @@
 import pandas as pd
 import sys
 import os
-# function that takes in a list of csv files and a file name and outupts the resulting combined file
+# function that takes in a list of csv files and outupts the resulting combined file
 def combine_csv(csv_list):
     
     # define a list to store the data frames with the additional column 'filename'
