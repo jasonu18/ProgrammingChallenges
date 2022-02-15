@@ -1,7 +1,7 @@
 # Challenge done using Python instead of PHP
 
 # import necessary modules 
-# pandas used for data manipulation / dataframe access, sys to get command line args, os to get basename and current dir
+# pandas used for data manipulation / dataframe access, sys to get command line args, os to get basename
 import pandas as pd
 import sys
 import os
@@ -24,16 +24,10 @@ def combine_csv(csv_list):
 
 
 # get the list of csv files from command line arguments
-inputs = sys.argv[1:]
-all_files = []
+input_files = sys.argv[1:]
 
-# modify input to put full path with correct formatting
-# for i in inputs:
-#     path = os.getcwd() + i[1:]
-#     path = path.replace('/', '\\')
-#     all_files.append(path)
 
-combine_csv(inputs)
+combine_csv(input_files)
 
 
 

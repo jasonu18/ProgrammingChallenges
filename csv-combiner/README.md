@@ -12,7 +12,7 @@ Use `filename` as the header for the additional column.
 We will run your code as follows
 
 ```
-$ python csv-combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > combined.csv
+$ python3 csv-combiner.py ./fixtures/accessories.csv ./fixtures/clothing.csv > combined.csv
 ```
 
 However, the CSV files inside the fixtures are not the only files we will run
